@@ -1,6 +1,6 @@
 %define name	gajim
-%define version	0.11.1
-%define rel 2
+%define version	0.11.2
+%define rel 0.pre1
 %define Summary	Jabber Client written in PyGTK
 
 
@@ -8,7 +8,7 @@ Summary:	%{Summary}
 Name:		%{name}
 Version:	%{version}
 Release:	%mkrel %{rel}
-Source:		http://www.gajim.org/downloads/gajim-%{version}.tar.bz2
+Source:		http://www.gajim.org/downloads/gajim-%{version}-pre1.tar.bz2
 URL:		http://www.gajim.org
 Group:		Networking/Instant messaging
 License:	GPL
@@ -52,7 +52,12 @@ Features:
 - Multiple accounts support
 
 %prep
-%setup -q
+# (misc) yes, weird tarball
+%setup -q -n %{name}-0.11.1.4 
+# (misc) rapid fix, need to be changed upstream
+perl -pi -e 's/Icon=gajim.png/Icon=gajim/' data/gajim.desktop.in.in
+perl -pi -e 's/Version=.*/Version=0.9.5/'  data/gajim.desktop.in.in
+
 %build
 %configure2_5x
 %make 
