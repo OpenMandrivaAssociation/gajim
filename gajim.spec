@@ -1,6 +1,6 @@
 %define name	gajim
-%define version	0.11.2
-%define rel 1 
+%define version	0.11.3
+%define rel 1
 %define Summary	Jabber Client written in PyGTK
 
 
@@ -26,7 +26,7 @@ BuildRequires:  ImageMagick
 BuildRequires:  desktop-file-utils
 BuildRequires:  intltool
 BuildRequires:  dbus-devel
-# required, or we see 
+# required, or we see
 #  creating gtkspell.la
 #  /bin/sed: can't read /usr/lib/libexpat.la: No such file or directory
 #  libtool: link: `/usr/lib/libexpat.la' is not a valid libtool archive
@@ -52,11 +52,11 @@ Features:
 - Multiple accounts support
 
 %prep
-%setup -q  
+%setup -q
 
 %build
 %configure2_5x
-%make 
+%make
 
 %install
 rm -rf $RPM_BUILD_ROOT installed-docs
@@ -80,7 +80,7 @@ convert $RPM_BUILD_ROOT/%_datadir/%name/data/pixmaps/gajim.png -resize 48x48 %bu
 rm -f %buildroot%_libdir/%name/*.la
 
 
-%find_lang %{name} 
+%find_lang %{name}
 %clean
 rm -rf $RPM_BUILD_ROOT
 
