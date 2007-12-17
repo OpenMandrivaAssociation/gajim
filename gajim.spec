@@ -12,7 +12,6 @@ Source:		http://www.gajim.org/downloads/gajim-%{version}.tar.bz2
 URL:		http://www.gajim.org
 Group:		Networking/Instant messaging
 License:	GPL
-BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 Requires:	python >= %{pyver}
 Requires:       pygtk2.0-libglade python-sqlite2
 Requires:       gnome-python-gconf
