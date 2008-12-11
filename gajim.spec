@@ -22,7 +22,7 @@ BuildRequires:	gnome-python-extras
 BuildRequires:	gtkspell-devel gtk2-devel pygtk2.0-devel
 BuildRequires:  libxscrnsaver-devel
 BuildRequires:  libexpat-devel
-BuildRequires:  ImageMagick
+BuildRequires:  imagemagick
 BuildRequires:  desktop-file-utils
 BuildRequires:  intltool
 BuildRequires:  dbus-devel
