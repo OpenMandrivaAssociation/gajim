@@ -1,5 +1,5 @@
 %define name	gajim
-%define version	0.11.4
+%define version	0.12
 %define rel 1
 %define Summary	Jabber Client written in PyGTK
 
