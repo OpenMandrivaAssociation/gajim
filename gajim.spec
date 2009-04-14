@@ -1,6 +1,6 @@
 %define name	gajim
 %define version	0.12.1
-%define rel 1
+%define rel 2
 %define Summary	Jabber Client written in PyGTK
 
 
@@ -9,6 +9,7 @@ Name:		%{name}
 Version:	%{version}
 Release:	%mkrel %{rel}
 Source:		http://www.gajim.org/downloads/gajim-%{version}.tar.bz2
+Patch:      gajim-ticket-4749.patch 
 URL:		http://www.gajim.org
 Group:		Networking/Instant messaging
 License:	GPL
@@ -53,6 +54,7 @@ Features:
 
 %prep
 %setup -q
+%patch -p0
 
 %build
 %configure2_5x
