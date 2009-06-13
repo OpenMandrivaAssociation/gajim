@@ -1,6 +1,6 @@
 %define name	gajim
-%define version	0.12.1
-%define rel 2
+%define version	0.12.3
+%define rel 1
 %define Summary	Jabber Client written in PyGTK
 
 
@@ -92,6 +92,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc installed-docs/*
 %{_bindir}/gajim
 %{_bindir}/gajim-remote
+%{_bindir}/gajim-history-manager
 %{_datadir}/applications/gajim.desktop
 %{_datadir}/gajim
 %{_datadir}/pixmaps/gajim.png
