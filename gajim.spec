@@ -1,5 +1,5 @@
 %define name	gajim
-%define version	0.12.3
+%define version	0.12.5
 %define rel 1
 %define Summary	Jabber Client written in PyGTK
 
@@ -97,6 +97,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/gajim
 %{_datadir}/pixmaps/gajim.png
 %{_datadir}/pixmaps/gajim_about.png
+%{_datadir}/pixmaps/gajim.svg
 %dir %{_libdir}/gajim
 %{_libdir}/gajim/gtkspell.so
 %{_libdir}/gajim/idle.so
