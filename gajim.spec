@@ -1,5 +1,5 @@
 %define name	gajim
-%define version	0.13.1
+%define version	0.13.2
 %define rel 1
 %define Summary	Jabber Client written in PyGTK
 
@@ -8,7 +8,7 @@ Summary:	%{Summary}
 Name:		%{name}
 Version:	%{version}
 Release:	%mkrel %{rel}
-Source:		http://www.gajim.org/downloads/gajim-%{version}.tar.bz2
+Source:		http://www.gajim.org/downloads/0.13/gajim-%{version}.tar.bz2
 URL:		http://www.gajim.org
 Group:		Networking/Instant messaging
 License:	GPLv3
