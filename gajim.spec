@@ -1,5 +1,5 @@
 %define name	gajim
-%define version	0.13.4
+%define version	0.14
 %define rel 1
 %define Summary	Jabber Client written in PyGTK
 
@@ -8,7 +8,7 @@ Summary:	%{Summary}
 Name:		%{name}
 Version:	%{version}
 Release:	%mkrel %{rel}
-Source:		http://www.gajim.org/downloads/0.13/gajim-%{version}.tar.bz2
+Source:		http://www.gajim.org/downloads/%{version}/gajim-%{version}.tar.bz2
 URL:		http://www.gajim.org
 Group:		Networking/Instant messaging
 License:	GPLv3
@@ -69,13 +69,13 @@ desktop-file-install --vendor="" \
   --add-category="X-MandrivaLinux-Internet-InstantMessaging" \
   --dir $RPM_BUILD_ROOT%{_datadir}/applications $RPM_BUILD_ROOT%{_datadir}/applications/*
 
-mkdir -p %buildroot/%_iconsdir
-mkdir -p %buildroot/%_liconsdir
-mkdir -p %buildroot/%_miconsdir
+#mkdir -p %buildroot/%_iconsdir
+#mkdir -p %buildroot/%_liconsdir
+#mkdir -p %buildroot/%_miconsdir
 
-convert $RPM_BUILD_ROOT/%_datadir/%name/data/pixmaps/gajim.png -resize 32x32 %buildroot/%_iconsdir/%name.png
-convert $RPM_BUILD_ROOT/%_datadir/%name/data/pixmaps/gajim.png -resize 16x16 %buildroot/%_miconsdir/%name.png
-convert $RPM_BUILD_ROOT/%_datadir/%name/data/pixmaps/gajim.png -resize 48x48 %buildroot/%_liconsdir/%name.png
+#convert $RPM_BUILD_ROOT/%_datadir/%name/data/pixmaps/gajim.png -resize 32x32 %buildroot/%_iconsdir/%name.png
+#convert $RPM_BUILD_ROOT/%_datadir/%name/data/pixmaps/gajim.png -resize 16x16 %buildroot/%_miconsdir/%name.png
+#convert $RPM_BUILD_ROOT/%_datadir/%name/data/pixmaps/gajim.png -resize 48x48 %buildroot/%_liconsdir/%name.png
 
 rm -f %buildroot%_libdir/%name/*.la
 
@@ -93,15 +93,16 @@ rm -rf $RPM_BUILD_ROOT
 %{_bindir}/gajim-history-manager
 %{_datadir}/applications/gajim.desktop
 %{_datadir}/gajim
-%{_datadir}/pixmaps/gajim.png
-%{_datadir}/pixmaps/gajim_about.png
-%{_datadir}/pixmaps/gajim.svg
-%dir %{_libdir}/gajim
-%{_libdir}/gajim/trayicon.so
+#%{_datadir}/pixmaps/gajim.png
+#%{_datadir}/pixmaps/gajim_about.png
+#%{_datadir}/pixmaps/gajim.svg
+#%dir %{_libdir}/gajim
+#%{_libdir}/gajim/trayicon.so
 %doc %{_mandir}/man1/gajim.1*
 %doc %{_mandir}/man1/gajim-remote.1*
-%_iconsdir/%name.png
-%_liconsdir/%name.png
-%_miconsdir/%name.png
+%doc %{_mandir}/man1/gajim-history-manager.1*
+%_iconsdir/hicolor/*/apps/%name.*
+#%_liconsdir/%name.png
+#%_miconsdir/%name.png
 
 
