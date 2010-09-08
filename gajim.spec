@@ -1,6 +1,6 @@
 %define name	gajim
 %define version	0.14
-%define rel 1
+%define rel 2
 %define Summary	Jabber Client written in PyGTK
 
 
@@ -18,6 +18,8 @@ Requires:       pygtk2.0-libglade python-sqlite2
 Requires:       gnome-python-gconf
 Requires:       gnome-python-extras
 Requires:       dbus-python bind-utils
+# for spellchecking
+Suggests:       gnome-python-gtkspell
 BuildRequires:	gnome-python-extras
 BuildRequires:	gtkspell-devel gtk2-devel pygtk2.0-devel
 BuildRequires:  libxscrnsaver-devel
