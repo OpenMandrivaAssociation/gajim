@@ -1,6 +1,6 @@
 Summary:	Jabber Client written in PyGTK
 Name:		gajim
-Version:	0.14.2
+Version:	0.14.4
 Release:	%mkrel 1
 Source:		http://www.gajim.org/downloads/0.14/gajim-%{version}.tar.bz2
 URL:		http://www.gajim.org
@@ -55,15 +55,15 @@ Features:
 %make
 
 %install
-rm -rf $RPM_BUILD_ROOT installed-docs
+rm -rf %{buildroot} installed-docs
 %makeinstall_std
-mv %buildroot%_datadir/doc/gajim installed-docs
+mv %{buildroot}%{_datadir}/doc/gajim installed-docs
 
 desktop-file-install --vendor="" \
   --remove-category="Application" \
   --add-category="GNOME" \
   --add-category="X-MandrivaLinux-Internet-InstantMessaging" \
-  --dir $RPM_BUILD_ROOT%{_datadir}/applications $RPM_BUILD_ROOT%{_datadir}/applications/*
+  --dir %{buildroot}%{_datadir}/applications %{buildroot}%{_datadir}/applications/*
 
 #mkdir -p %buildroot/%_iconsdir
 #mkdir -p %buildroot/%_liconsdir
@@ -73,12 +73,12 @@ desktop-file-install --vendor="" \
 #convert $RPM_BUILD_ROOT/%_datadir/%name/data/pixmaps/gajim.png -resize 16x16 %buildroot/%_miconsdir/%name.png
 #convert $RPM_BUILD_ROOT/%_datadir/%name/data/pixmaps/gajim.png -resize 48x48 %buildroot/%_liconsdir/%name.png
 
-rm -f %buildroot%_libdir/%name/*.la
+rm -f %{buildroot}%{_libdir}/%{name}/*.la
 
 
 %find_lang %{name}
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 
 %files -f %{name}.lang
@@ -97,7 +97,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc %{_mandir}/man1/gajim.1*
 %doc %{_mandir}/man1/gajim-remote.1*
 %doc %{_mandir}/man1/gajim-history-manager.1*
-%_iconsdir/hicolor/*/apps/%name.*
+%{_iconsdir}/hicolor/*/apps/%{name}.*
 #%_liconsdir/%name.png
 #%_miconsdir/%name.png
 
