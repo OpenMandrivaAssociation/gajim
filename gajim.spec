@@ -15,7 +15,7 @@ Requires:	glib-networking
 Requires:	python3dist(pycurl)
 Requires:	python3dist(dbus-python)
 Requires:	python3dist(pygobject)
-Requires:	python3dist(openssl)
+Requires:	python3dist(pyopenssl)
 Requires:	python3dist(nbxmpp)
 Requires:	python-pkg-resources
 Requires:	python3dist(pyasn1)
