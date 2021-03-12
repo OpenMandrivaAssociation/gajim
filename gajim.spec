@@ -54,49 +54,35 @@ Features:
 %setup -q
 
 %build
-%configure2_5x
-%make
+%py_build
+
 
 %install
-rm -rf %{buildroot} installed-docs
-%makeinstall_std
-mv %{buildroot}%{_datadir}/doc/gajim installed-docs
+%py_install
 
 desktop-file-install --vendor="" \
-  --remove-category="Application" \
-  --add-category="GNOME" \
-  --add-category="X-MandrivaLinux-Internet-InstantMessaging" \
-  --dir %{buildroot}%{_datadir}/applications %{buildroot}%{_datadir}/applications/*
+	--remove-category="Application" \
+	--add-category="GNOME" \
+	--dir %{buildroot}%{_datadir}/applications %{buildroot}%{_datadir}/applications/*
 
-#mkdir -p %buildroot/%_iconsdir
-#mkdir -p %buildroot/%_liconsdir
-#mkdir -p %buildroot/%_miconsdir
-
-#convert $RPM_BUILD_ROOT/%_datadir/%name/data/pixmaps/gajim.png -resize 32x32 %buildroot/%_iconsdir/%name.png
-#convert $RPM_BUILD_ROOT/%_datadir/%name/data/pixmaps/gajim.png -resize 16x16 %buildroot/%_miconsdir/%name.png
-#convert $RPM_BUILD_ROOT/%_datadir/%name/data/pixmaps/gajim.png -resize 48x48 %buildroot/%_liconsdir/%name.png
+find %{buildroot} -name '*.la' -delete
 
 %find_lang %{name}
 
 %files -f %{name}.lang
-%defattr(-,root,root)
-%doc installed-docs/*
+%doc COPYING
 %{_bindir}/gajim
 %{_bindir}/gajim-remote
 %{_bindir}/gajim-history-manager
-%{_datadir}/applications/gajim.desktop
-%{_datadir}/gajim
-#%{_datadir}/pixmaps/gajim.png
-#%{_datadir}/pixmaps/gajim_about.png
-#%{_datadir}/pixmaps/gajim.svg
-#%dir %{_libdir}/gajim
-#%{_libdir}/gajim/trayicon.so
-%doc %{_mandir}/man1/gajim.1*
-%doc %{_mandir}/man1/gajim-remote.1*
-%doc %{_mandir}/man1/gajim-history-manager.1*
-%{_iconsdir}/hicolor/*/apps/%{name}.*
-#%_liconsdir/%name.png
-#%_miconsdir/%name.png
+%{_datadir}/applications/org.gajim.Gajim.desktop
+%{_iconsdir}/hicolor/scalable/apps/org.gajim.Gajim.svg
+%{_iconsdir}/hicolor/scalable/apps/org.gajim.Gajim-symbolic.svg
+%{_datadir}/metainfo/org.gajim.Gajim.appdata.xml
+%{_mandir}/man1/gajim.1*
+%{_mandir}/man1/gajim-remote.1*
+%{_mandir}/man1/gajim-history-manager.1*
+%{python3_sitelib}/%{name}
+%{python3_sitelib}/%{name}-%{version}*.egg-info
 
 
 
