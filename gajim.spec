@@ -81,8 +81,8 @@ find %{buildroot} -name '*.la' -delete
 %{_mandir}/man1/gajim.1*
 %{_mandir}/man1/gajim-remote.1*
 %{_mandir}/man1/gajim-history-manager.1*
-%{python3_sitelib}/%{name}
-%{python3_sitelib}/%{name}-%{version}*.egg-info
+%{python_sitelib}/%{name}
+#{python_sitelib}/%{name}-%{version}*.egg-info
 
 
 
