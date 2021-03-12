@@ -12,18 +12,18 @@ BuildRequires:	pkgconfig(python)
 BuildRequires:	python3dist(setuptools)
 
 Requires:	glib-networking
-Requires:	python-curl
-Requires:	python-dbus
-Requires:	python-gobject3
-Requires:	python-OpenSSL
+Requires:	python3dist(pycurl)
+Requires:	python3dist(dbus-python)
+Requires:	python3dist(pygobject)
+Requires:	python3dist(openssl)
 Requires:	python3dist(nbxmpp)
 Requires:	python-pkg-resources
-Requires:	python-pyasn1
+Requires:	python3dist(pyasn1)
 
-Recommends:	python3-axolotl
-Recommends:	python3-gnupg
-Recommends:	python3-idna
-Recommends:	python3-pillow
+Recommends:	python-axolotl
+Recommends:	python-gnupg
+Recommends:	python3dist(idna)
+Recommends:	python3dist(pillow)
 Recommends:	typelib(Farstream) == 0.2
 Recommends:	typelib(GUPnP) == 1.0
 Recommends:	typelib(GstAudio) == 1.0
