@@ -19,6 +19,7 @@ Requires:	python3dist(pyopenssl)
 Requires:	python3dist(nbxmpp)
 Requires:	python-pkg-resources
 Requires:	python3dist(pyasn1)
+Requires:	python3dist(keyring)
 
 Recommends:	python-axolotl
 Recommends:	python-gnupg
