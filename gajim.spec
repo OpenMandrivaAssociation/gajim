@@ -51,7 +51,7 @@ Features:
 - Multiple accounts support
 
 %prep
-%setup -q
+%setup -q -n %{name}-1.3.1-2
 
 %build
 %py_build
