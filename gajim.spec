@@ -1,34 +1,36 @@
 Summary:	Jabber Client written in PyGTK
 Name:		gajim
-Version:	0.14.4
-Release:	3
-Source:		http://www.gajim.org/downloads/0.14/gajim-%{version}.tar.bz2
+Version:	1.3.1-2
+Release:	1
+Source:		http://www.gajim.org/downloads/1.3/gajim-%{version}.tar.bz2
 URL:		http://www.gajim.org
 Group:		Networking/Instant messaging
 License:	GPLv3
-Requires:	python >= %{py_ver}
-Requires:       pygtk2.0-libglade python-sqlite2
-Requires:       gnome-python-gconf
-Requires:       gnome-python-extras
-Requires:       dbus-python bind-utils
-# for spellchecking
-Suggests:       gnome-python-gtkspell
-BuildRequires:	gnome-python-extras
-BuildRequires:	gtkspell-devel gtk2-devel pygtk2.0-devel
-BuildRequires:  libxscrnsaver-devel
-BuildRequires:  libexpat-devel
-BuildRequires:  imagemagick
-BuildRequires:  desktop-file-utils
-BuildRequires:  intltool
-BuildRequires:  dbus-devel
-# required, or we see
-#  creating gtkspell.la
-#  /bin/sed: can't read /usr/lib/libexpat.la: No such file or directory
-#  libtool: link: `/usr/lib/libexpat.la' is not a valid libtool archive
-#  make[3]: *** [gtkspell.la] Error 1
-# on x86 ( and not on x86_64 )
-# may have to be removed in the future, when the real problem is fixed
-BuildRequires:  expat-devel
+
+BuildRequires:	intltool
+BuildRequires:	pkgconfig(python)
+BuildRequires:	python3dist(setuptools)
+
+Requires:	glib-networking
+Requires:	python-curl
+Requires:	python-dbus
+Requires:	python-gobject3
+Requires:	python-OpenSSL
+Requires:	python3dist(nbxmpp)
+Requires:	python-pkg-resources
+Requires:	python-pyasn1
+
+Recommends:	python3-axolotl
+Recommends:	python3-gnupg
+Recommends:	python3-idna
+Recommends:	python3-pillow
+Recommends:	typelib(Farstream) == 0.2
+Recommends:	typelib(GUPnP) == 1.0
+Recommends:	typelib(GstAudio) == 1.0
+Recommends:	typelib(Geoclue) == 2.0
+Recommends:	typelib(Gspell) == 1
+Recommends:	typelib(Secret) == 1
+Recommends:	typelib(NetworkManager) == 1.0
 
 %define debug_package %{nil}
 
