@@ -1,7 +1,7 @@
 Summary:	Jabber Client written in PyGTK
 Name:		gajim
-Version:	1.3.2
-Release:	2
+Version:	1.4.2
+Release:	1
 Source:		http://www.gajim.org/downloads/1.3/gajim-%{version}.tar.gz
 URL:		http://www.gajim.org
 Group:		Networking/Instant messaging
@@ -77,6 +77,6 @@ find %{buildroot} -name '*.la' -delete
 %{_datadir}/applications/org.gajim.Gajim.desktop
 %{_iconsdir}/hicolor/scalable/apps/*.svg
 %{_datadir}/metainfo/org.gajim.Gajim.appdata.xml
-%doc %{_mandir}/man1/*.1*
 %{python_sitelib}/%{name}
 %{python_sitelib}/%{name}-*.egg-info
+%{_mandir}/man1/*.1*
