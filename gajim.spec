@@ -68,7 +68,6 @@ find %{buildroot} -name '*.la' -delete
 %doc COPYING
 %{_bindir}/gajim
 %{_bindir}/gajim-remote
-%{_bindir}/gajim-history-manager
 %{_datadir}/applications/org.gajim.Gajim.desktop
 %{_iconsdir}/hicolor/scalable/apps/*.svg
 %{_datadir}/metainfo/org.gajim.Gajim.appdata.xml
