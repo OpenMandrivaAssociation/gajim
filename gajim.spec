@@ -60,11 +60,6 @@ Features:
 %install
 %py_install
 
-desktop-file-install --vendor="" \
-	--remove-category="Application" \
-	--add-category="GNOME" \
-	--dir %{buildroot}%{_datadir}/applications %{buildroot}%{_datadir}/applications/*
-
 find %{buildroot} -name '*.la' -delete
 
 %find_lang %{name}
