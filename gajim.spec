@@ -1,8 +1,8 @@
 Summary:	Jabber Client written in PyGTK
 Name:		gajim
-Version:	1.4.2
+Version:	1.4.3
 Release:	1
-Source:		http://www.gajim.org/downloads/1.3/gajim-%{version}.tar.gz
+Source:		http://www.gajim.org/downloads/1.4/gajim-%{version}.tar.gz
 URL:		http://www.gajim.org
 Group:		Networking/Instant messaging
 License:	GPLv3
