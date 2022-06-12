@@ -65,7 +65,6 @@ find %{buildroot} -name '*.la' -delete
 %find_lang %{name}
 
 %files -f %{name}.lang
-%doc COPYING
 %{_bindir}/gajim
 %{_bindir}/gajim-remote
 %{_datadir}/applications/org.gajim.Gajim.desktop
