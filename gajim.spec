@@ -67,9 +67,9 @@ find %{buildroot} -name '*.la' -delete
 %files -f %{name}.lang
 %{_bindir}/gajim
 %{_bindir}/gajim-remote
-%{_datadir}/applications/org.gajim.Gajim.desktop
-%{_iconsdir}/hicolor/scalable/apps/*.svg
-%{_datadir}/metainfo/org.gajim.Gajim.appdata.xml
+#{_datadir}/applications/org.gajim.Gajim.desktop
+#{_iconsdir}/hicolor/scalable/apps/*.svg
+#{_datadir}/metainfo/org.gajim.Gajim.appdata.xml
 %{python_sitelib}/%{name}
-%{python_sitelib}/%{name}-*.egg-info
-%{_mandir}/man1/*.1*
+#{python_sitelib}/%{name}-*.egg-info
+#{_mandir}/man1/*.1*
